@@ -10,6 +10,11 @@
   </head>
 
   <body>
+  <% if flash.now[:errors]%>
+      <% flash.now[:errors].each do |error| %>
+      <%= error %>
+      <%end %>
+      <% end %>
     <%= yield %>
   </body>
 </html>
